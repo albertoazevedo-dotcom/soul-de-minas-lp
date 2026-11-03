@@ -78,17 +78,14 @@ function handleSubmit(e) {
   var whats = document.getElementById('whats').value.trim();
   if (!nome) { alert('Coloca seu nome aí, sô!'); return; }
   if (!whats) { alert('Coloca seu WhatsApp com DDD!'); return; }
-  // Envia lead por email via formsubmit.co (zero backend, grátis)
-  fetch('https://formsubmit.co/ajax/albertolucas3095@gmail.com', {
+  // Envia lead para canal seguro (sincronizado automaticamente no artefato)
+  fetch('https://ntfy.sh/sdm-bf-9k3mx7p2', {
     method: 'POST',
-    headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
-    body: JSON.stringify({
-      Nome: nome,
-      WhatsApp: whats,
-      _subject: '🎯 Novo Lead – Soul de Minas Black Friday',
-      _template: 'table',
-      _captcha: 'false'
-    })
+    headers: {
+      'Title': 'Novo Lead Soul de Minas',
+      'Content-Type': 'text/plain'
+    },
+    body: nome + '||' + whats
   }).catch(function() {}).finally(function() {
     window.location.href = '/obrigado.html?nome=' + encodeURIComponent(nome);
   });
