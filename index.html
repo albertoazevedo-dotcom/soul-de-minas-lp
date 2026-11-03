@@ -17,7 +17,6 @@ input::placeholder{color:#7A6A5F}
 
 <!-- HERO -->
 
-
 <!-- PROVA SOCIAL -->
 <section style="position: relative; overflow: hidden; background: #F2A93B; padding: 28px 24px 120px 24px">
 <svg aria-hidden="true" viewBox="0 0 1440 300" preserveAspectRatio="none" style="position: absolute; left: 0; bottom: 0; width: 100%; height: 260px">
@@ -54,17 +53,15 @@ input::placeholder{color:#7A6A5F}
 <div style="background: #1F7A7A; padding: 14px 24px; text-align: center; font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: 26px; color: #FFFFFF; letter-spacing: 1px">GARANTA SUA VAGA AGORA</div>
 <div style="padding: 26px 28px 30px 28px">
 
-
-
 <sc-if value="{{ naoEnviado }}" hint-placeholder-val="{{ true }}">
-<form onSubmit="" style="margin-top: 24px; display: flex; flex-direction: column; gap: 16px">
+<form onSubmit="{{submit}}" style="margin-top: 24px; display: flex; flex-direction: column; gap: 16px">
 <div style="display: flex; flex-direction: column; gap: 6px">
 <label for="nome" style="font-weight: 800; font-size: 17px">Primeiro nome</label>
-<input id="nome" type="text" autocomplete="given-name" placeholder="Como a gente te chama?" value="" onInput="" style="box-sizing: border-box; width: 100%; height: 56px; border: 3px solid #E3D9C6; border-radius: 14px; padding: 0 16px; font-family: 'Nunito', sans-serif; font-size: 20px; font-weight: 700; color: #3B2A22; background: #FFFFFF">
+<input id="nome" type="text" autocomplete="given-name" placeholder="Como a gente te chama?" value="{{nome}}" onInput="{{onNome}}" style="box-sizing: border-box; width: 100%; height: 56px; border: 3px solid #E3D9C6; border-radius: 14px; padding: 0 16px; font-family: 'Nunito', sans-serif; font-size: 20px; font-weight: 700; color: #3B2A22; background: #FFFFFF">
 </div>
 <div style="display: flex; flex-direction: column; gap: 6px">
 <label for="whats" style="font-weight: 800; font-size: 17px">WhatsApp com DDD</label>
-<input id="whats" type="tel" autocomplete="tel" placeholder="(31) 90000-0000" value="" onInput="" style="box-sizing: border-box; width: 100%; height: 56px; border: 3px solid #E3D9C6; border-radius: 14px; padding: 0 16px; font-family: 'Nunito', sans-serif; font-size: 20px; font-weight: 700; color: #3B2A22; background: #FFFFFF">
+<input id="whats" type="tel" autocomplete="tel" placeholder="(31) 90000-0000" value="{{whats}}" onInput="{{onWhats}}" style="box-sizing: border-box; width: 100%; height: 56px; border: 3px solid #E3D9C6; border-radius: 14px; padding: 0 16px; font-family: 'Nunito', sans-serif; font-size: 20px; font-weight: 700; color: #3B2A22; background: #FFFFFF">
 </div>
 <button type="submit" style="height: 64px; border: 0; border-radius: 16px; background: #C23E29; color: #FFFFFF; font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: 26px; letter-spacing: 1px; cursor: pointer; box-shadow: 0 6px 0 #8F2A19">QUERO FAZER PARTE</button>
 
@@ -74,7 +71,7 @@ input::placeholder{color:#7A6A5F}
 <sc-if value="{{ enviado }}" hint-placeholder-val="{{ false }}">
 <div style="margin-top: 24px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px">
 <div style="width: 76px; height: 76px; border-radius: 50%; background: #1F7A7A; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" viewBox="0 0 24 24" style="width: 44px; height: 44px" fill="none" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></div>
-<div style="font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: 32px; line-height: 1.1; color: #C23E29">Uai, , você está dentro!</div>
+<div style="font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: 32px; line-height: 1.1; color: #C23E29">Uai, {{nomeOk}}, você está dentro!</div>
 <div style="font-size: 18px; font-weight: 700; line-height: 1.4">Sua carteirinha digital está garantida. Agora entre no grupo do WhatsApp: o link da oferta será liberado dia 17/11, só para quem estiver lá.</div>
 </div>
 </sc-if>
@@ -147,7 +144,6 @@ input::placeholder{color:#7A6A5F}
 </section>
 
 <!-- PREÇO TEASER + LEMA -->
-
 
 <!-- COMO FUNCIONA -->
 <section style="padding: 60px 24px 20px 24px">

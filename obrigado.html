@@ -32,15 +32,15 @@ a{color:inherit}
 <h1 style="margin: 0; font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: clamp(38px, 6vw, 56px); line-height: 1.02; color: #3b2a22">Opa! Agora falta só um&nbsp;<span style="display: inline-block; background: rgb(194, 62, 41); color: rgb(255, 255, 255); border-radius: 16px; padding: 0px 18px 6px; transform: rotate(-1.5deg)">trem</span><span style="display: inline-block; background: rgb(194, 62, 41); color: rgb(255, 255, 255); border-radius: 16px; padding: 0px 18px 6px; transform: rotate(-1.5deg)">!</span></h1>
 <p style="margin: 0; font-size: 21px; line-height: 1.45; font-weight: 700; max-width: 560px">&nbsp;Entrar no grupo do WhatsApp. <br>é lá que a gente vai te enviar o link da oferta, <br>que será liberado dia 17/11.</p>
 
-<a href="https://chat.whatsapp.com/SEU-LINK-DO-GRUPO" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; gap: 14px; margin-top: 8px; min-height: 68px; width: 100%; max-width: 480px; box-sizing: border-box; padding: 0 28px; border-radius: 18px; background: #0F7A5C; color: #FFFFFF; text-decoration: none; font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: 26px; letter-spacing: 1px; box-shadow: 0 7px 0 #0A5640">
+<a href="{{groupUrl}}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; gap: 14px; margin-top: 8px; min-height: 68px; width: 100%; max-width: 480px; box-sizing: border-box; padding: 0 28px; border-radius: 18px; background: #0F7A5C; color: #FFFFFF; text-decoration: none; font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: 26px; letter-spacing: 1px; box-shadow: 0 7px 0 #0A5640">
 <svg aria-hidden="true" viewBox="0 0 24 24" style="width: 32px; height: 32px; flex: none" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.4-4.2A8 8 0 1 1 8.4 18.7z"></path><path d="M9 9.5c.4 2.2 2.3 4.1 4.5 4.8l1.3-1.2-1.8-1-.8.6c-.8-.4-1.5-1.1-1.9-1.9l.6-.8-1-1.8z"></path></svg>
 ENTRAR NO GRUPO
 </a>
 
 <sc-if value="{{ redirecting }}" hint-placeholder-val="{{ true }}">
 <div style="width: 100%; max-width: 480px; display: flex; flex-direction: column; gap: 8px">
-<div style="font-weight: 800; font-size: 17px; color: #1F7A7A">Levando você para o grupo em s...</div>
-<div style="height: 10px; border-radius: 999px; background: #E3D9C6; overflow: hidden"><div style="height: 10px; border-radius: 999px; background: #1F7A7A; width: "></div></div>
+<div style="font-weight: 800; font-size: 17px; color: #1F7A7A">Levando você para o grupo em {{secs}}s...</div>
+<div style="height: 10px; border-radius: 999px; background: #E3D9C6; overflow: hidden"><div style="height: 10px; border-radius: 999px; background: #1F7A7A; width: {{barW}}"></div></div>
 <div style="font-weight: 700; font-size: 15px; color: #5C4A40">Se não abrir sozinho, toque no botão acima.</div>
 </div>
 </sc-if>
@@ -50,7 +50,6 @@ ENTRAR NO GRUPO
 </div>
 
 <!-- próximos passos -->
-
 
 </div>
 </div>
